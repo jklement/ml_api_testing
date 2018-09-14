@@ -1,0 +1,27 @@
+{% extends "main.html" %}
+
+{% block form %}
+<h2>Request parameters</h2>
+<form action="/api2" method="POST">
+    <label>sepal length
+        <input type="text" name="sepal_length" value="{{ sepal_length }}" required>
+    </label>
+    <label>sepal width
+        <input type="text" name="sepal_width" value="{{ sepal_width }}" required>
+    </label>
+    <label>petal length
+        <input type="text" name="petal_length" value="{{ petal_length }}" required>
+    </label>
+    <label>petal width
+        <input type="text" name="petal_width" value="{{ petal_width }}" required>
+    </label>
+    <button type="submit" name="submit" value="request">Submit</button>
+</form>
+
+{% endblock form %}
+
+<div>
+    {% block response %}
+    {% endblock %}
+
+</div>

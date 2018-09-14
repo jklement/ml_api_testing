@@ -1,0 +1,30 @@
+{% extends "api2.html" %}
+
+{% block response %}
+<h2>Response</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Predicted</th>
+            <th>Score</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for line in predictions %}
+        <tr>
+            <td>{{ line.predicted }}</td>
+            <td>{{ line.score }}</td>
+        </tr>
+        <tr>
+            <td>{{ line.predicted_2 }}</td>
+            <td>{{ line.score_2 }}</td>
+        </tr>
+        <tr>
+            <td>{{ line.predicted_3 }}</td>
+            <td>{{ line.score_3 }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+{% endblock response %}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main</title>
+</head>
+<body>
+
+    {% if user %}
+      <h3>Welcome {{ user.nickname() }} </h3>
+    {% endif %}
+      <a href="{{ url }}">{{ url_linktext }}</a>
+
+<h1>API testing gateway</h1>
+<a href="api1">Api 1 - Merchandise category predictions based on a vendor number</a><br>
+<a href="api2">Api 2 - Tony's IRIS model</a>
+<a href="api3">Api 3 - Not implemented</a>
+<div>
+    {% block form %}
+    {% endblock %}
+</div>
+<div>
+    {% block response %}
+    {% endblock %}
+</div>
+</body>
+</html>

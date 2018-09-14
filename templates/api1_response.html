@@ -1,0 +1,24 @@
+{% extends "api1.html" %}
+
+{% block response %}
+<h2>Response</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Merchandise Category</th>
+            <th>Score</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for line in predictions %}
+    {% for col in line.classes %}
+        <tr>
+            <td>{{ line.classes[loop.index] }}</td>
+            <td>{{ line.scores[loop.index] }}</td>
+        </tr>
+    {% endfor %}
+    {% endfor %}
+    </tbody>
+</table>
+
+{% endblock response %}

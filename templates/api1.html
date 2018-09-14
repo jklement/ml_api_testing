@@ -1,0 +1,17 @@
+{% extends "main.html" %}
+
+{% block form %}
+<h2>Request parameters</h2>
+<form action="/api1" method="POST">
+    <label>Vendor
+        <input type="text" name="vendor" placeholder="82911001" required>
+    </label>
+    <button type="submit" name="submit" value="request">Submit</button>
+</form>
+{% endblock form %}
+
+<div>
+    {% block response %}
+    {% endblock %}
+
+</div>

@@ -1,0 +1,14 @@
+{% extends "main.html" %}
+
+{% block form %}
+<h2>Request parameters</h2>
+<form action="/api3" method="POST">
+    <label>Model ID
+        <input type="text" name="model_id" value="model_id" required>
+    </label>
+    <label>Description
+        <input type="text" name="description" value="description" required>
+    </label>
+    <button type="submit" name="submit" value="request">Submit</button>
+</form>
+{% endblock form %}
